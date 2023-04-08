@@ -38,7 +38,7 @@ useEffect(() => {
 
     { result?.meanings?.length > 0 && (
       <> 
-      <Heading searchWord={word} phonetic={result.phonetics[1].text}/>
+      <Heading searchWord={word} phonetic={result.phonetics[1].text} audioUrl={result.phonetics[0].audio}/>
 
       {result.meanings.map(content => {
         return  <Content {...content} />
